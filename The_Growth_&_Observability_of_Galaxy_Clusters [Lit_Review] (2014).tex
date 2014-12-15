@@ -1,0 +1,193 @@
+\documentclass[useAMS,usenatbib]{mn2e}
+\usepackage{graphicx,bm,times}
+\usepackage{epstopdf}
+
+% \usepackage{Times}
+
+%%%%% MACROS %%%%%
+\usepackage{float}
+\usepackage{graphicx,subfig}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{fancyref}
+\usepackage{siunitx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+\usepackage{caption}
+\usepackage{placeins}
+\usepackage[export]{adjustbox}
+\usepackage{lscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{inputs/Journal_Types/journal_types.tex}
+\input{inputs/Title/title.tex}
+
+\begin{abstract}
+This paper aims to provide an overview of the fundamental physical processes that narrate the evolution and detection of clusters and the relevance of their implications. Although this area of galaxy formation theory is still partially phenomenological, I attempt to identify the precursors of the most massive galaxy clusters $M \approx 10^{15} \unit{M_{\sun}}$ and alleviate ambiguities in the literature by evaluating four iconic cluster surveys ($\sim 3000$ clusters) up to $z \lesssim 1.5$, with a maximum look back time of approximately $9 \unit{Gyr}$. I generate theoretical evolution paths for the homogenised cluster populations through cosmic time by implementing numerical simulations and attempt to draw conclusions from these predictions via expectational comparison. These conclusions will heavily influence my forthcoming work.
+\end{abstract}
+\begin{keywords}
+Key words: cosmology: observations - catalogues - galaxies: clusters: general - X-rays: galaxies: clusters 
+\end{keywords}
+\section{Introduction} 
+\label{sec:introduction}
+Galaxy clusters rule the cosmic evolutionary hierarchy as the most massive, gravitationally bound celestial bodies in the universe, with masses ranging from approximately $10^{13} \unit{M_{\sun}}$ for small groups and protoclusters, to $10^{15} \unit{M_{\sun}}$ for the richest clusters. These can be up to several $\unit{Mpc}$ in radius and contain thousands of galaxies that follow a morphology-density relation which evolves with the cluster \citep{Dressler1980Galaxy-morpholo, Dressler1997Evolution-since}. Cluster evolution supports a hierarchical scenario of large scale structure development \citep{Peebles1980The-large-scale} via gravitational instabilities \citep{Jeans1902The-Stability-o, Lifshitz1946On-the-gravitat}, cumulative merging and accretive processes \citep{Press1974Formation-of-Ga}. According to the concordance $\Lambda$ Cold Dark Matter ($\Lambda$CDM) cosmological model \citep{Peacock1994Reconstructing-,Kauffmann1999Clustering-of-g,Allen2002Cosmological-co}: precursory subclumps of matter originally deviated from the \citeauthor{Hubble1929A-Relation-betw} flow, as density perturbations during primordial events in the early universe have larger amplitudes on smaller mass scales allowing them to undergo gravitational relaxation. These members then merge and coalesce to form progressively larger structures.
+
+Clusters are a particularly rich sources of information and provide a sensitive probe of cosmological parameters, as generalising universal expansion in terms of \citeauthor{Hubble1929A-Relation-betw}’s Law relates a galaxy cluster's cosmological redshift $z$ with a unique time $t(z)$ since the Big Bang \citep{Eisenstein1997An-Analytic-Exp}. Their present-day spatial abundance coincides with our knowledge of baryonic acoustic oscillations \citep{Seo2003Probing-Dark-En}, anisotropies across the cosmic microwave background radiation (CMB hereafter) \citep{Komatsu2011Seven-year-Wilk} and can be used to parametrise the initial conditions of the universe.
+
+Clusters of galaxies must have formed relatively late in the history of the Universe, since the mean density of matter in the Universe $\rho$ scales as $\sim (1 + z)^{3}$ and corresponds to a density parameter $\Omega_m \approx 0.3$. At the present day, the average densities of gravitationally bound systems such as clusters are much greater than this value with over-densities\footnote{If $\delta \rho$ is the enhancement in density of some region due to gravitational attraction,  over the average background density $\rho$ we define the over-density as $\Delta = \delta \rho/\rho$.} of $\Delta \approx  1000$ \citep{Longair2008Galaxy-Formatio}.
+
+These are important conclusions as they suggest that the structures we observe today did not begin to form in the inaccessibly remote past, but at redshifts which are in principle accessible by observation. This enables us to identify prospective progenitors of the most massive clusters and make observational predictions based on their evolutionary model. This is the premise of our investigation.
+
+This paper employs a Friedmann-Robertson-Walker cosmological model described by the parameters; $\Omega_{0}= 1$, $q_{0}=0.5$, and $H_{0}=72\unit{kms^{-1} Mpc^{-1}}$.
+\section{Cluster Evolution}
+\label{sec:Cluster Evolution}%haloes (major mergers), mergers with
+%\subsection{Methods, Histories \& Rates of Mass Accretion}
+Clusters are dynamically dominated by dark matter \citep{Zwicky1933Die-Rotverschie} in the form of nonlinear, quasi-equilibrium haloes whose universial density profile plays a pivotal role in modern theories of galaxy formation \citep{Navarro1997A-Universal-Den}. These haloes assemble through several different processes; the diffuse accretion of unresolved haloes or dark matter particles, and through mergers with comparable mass or smaller satellite haloes \citep{Fakhouri2010Dark-matter-hal, Lidman2013The-importance-}. During mergers, which can occur at an upper limit of $\sim 4700 \unit{kms^{-1}}$ \citep{Clowe2007Catching-a-bull}, the gaseous baryonic component collapses, creating strong shocks that raise the entropy of the material allowing it to lose energy via radiative cooling  as it is compressed. If this process is inefficient, the system relaxes to hydrostatic equilibrium, with its self-gravity balanced by pressure gradients \citep{Mo2010Galaxy-Formatio}. On the other hand collisionless matter (e.g. CDM or stars) causes no shocks as it violently relaxes into virial equilibrium. 
+ %Clusters of galaxies are X-ray sources because galaxy formation is inefficient. Only about a tenth of the universe’s baryons reside with stars in galaxies, leaving the vast majority adrift in intergalactic space. Most of these intergalactic baryons are extremely difficult to observe, but the deep potential wells of galaxy clusters compress the associated baryonic gas and heat it to X-ray emit- ting temperatures. 
+
+%Clusters mostly have irregular or lumpy shapes as they grow by absorbing surrounding groups and clusters and their predicted structure has been thoroughly explored using numerical simulations. The orbits of newly-acquired groups take them through the core of the cluster. Clusters become more massive, but their radii increase only slowly. 
+
+Tracing the mass accretion histories $M(z)$ of the most massive progenitor halo is a useful way to quantify a halo's mass assembly history \citep{McBride2009Mass-accretion-, Fakhouri2010The-merger-rate}. This is an important technique used in statistical studies of the distributions of halo formation redshifts, and the correlations between formation time and other halo properties such as relative contributions to mass growth from major and minor mergers. Moreover, the time derivative of the $M(z)$ gives the mass growth rate of dark matter haloes and is directly related to the accretion rate of baryons from the cosmic web onto dark matter haloes \citep{Fakhouri2010The-merger-rate}. For a more in depth review refer to \S \ref{subsec: Evolutionary and Cosmological Analysis}. 
+
+%In a galaxy cluster, we define the radius r200 such that, within it, the average density is 200 times the critical density; r200 is sometimes called the virial radius. At larger radii, the cluster cannot yet be relaxed and in virial equilibrium. Even the relaxed core will be disturbed when new galaxies fall through it as they join the cluster.
+
+\section{Observability}
+The mass distribution in clusters of galaxies can be measured by many complementary methods such as dynamical estimates\footnote{Using the virial theorem to yield a simple relation between the mass of the cluster, the radial velocity dispersion of the member galaxies and the characteristic radius of the galaxy distribution.} \citep{IderChithamA2029} and routines that utilise general relativity theory independently of the distribution of baryonic matter, such as weak and strong gravitational lensing \citep{Einstein1915Erklarung-der-P, Zwicky1937Nebulae-as-Grav}. In \S \ref{X-ray emissivity and the ICM} and \S \ref{subsec: Thermal SZ Effect} I focus on the two techniques most relevant to the investigation.
+\subsection{X-ray emissivity and the ICM}\label{X-ray emissivity and the ICM}  
+
+Observation occurs frequently in the X-ray regime as rich clusters are strong extended X-ray sources with a density squared ($n^2_e$) dependence that allows them to be efficiently found over a wide redshift range \citep{Gursky1971A-Strong-X-Ray-, Forman1972Observations-of, Kellogg1972The-Extended-X-}. This emission originates from the thermal bremsstrahlung of hot, diffuse intracluster gas (plasma) \citep{Felten1966Omnidirectional} with characteristic luminosities of $\sim 10^{43}$ to $10^{45} \unit{ergss^{-1}}$. The implied mass of this intracluster medium (ICM) is typically an order of magnitude larger than the total stellar mass in the member galaxies (due to inefficient formation), making it the dominant baryonic component in clusters \citep{White1993The-baryon-cont, Allen2002Cosmological-co}. If the ICM is in hydrostatic equilibrium, its density and temperature profiles can be used to infer the total dynamical mass, however this state of relaxation is not necessarily expected unless a cluster formed a long time ago, as most tend to be dynamically young. 
+%A typical galaxy in even the largest and most populous clusters has completed only a few orbits since the cluster formed, and in many smaller groups, galaxies are still falling towards the group center for the first time. Indeed, many clusters show strong asymmetries and substructure in their X-ray emission, indicating that they are still in the process of formation. 
+%Such clusters are generally discarded when using X-ray data to infer dynamical masses. 
+%This is why it is standard practice to focus only on clusters that appear smooth and symmetrical, and hence relaxed, in their X-ray emission.
+ %It was quickly appreciated that the X-ray emission of the gas provides a very powerful probe of the gravitational potential within the cluster enabling the distribution of hot gas and the total gravitating mass to be determined.
+
+
+
+\subsection{The Thermal Sunyaev-Zel'dovich Effect}\label{subsec: Thermal SZ Effect}
+
+Outside of the X-ray domain, the redshift-independent thermal Sunyaev-Zel'dovich (SZ) effect \citep{Sunyaev1970Small-Scale-Flu} is emerging as an efficient way to detect distant, massive clusters that fall below the flux limits of X-ray surveys.  The SZ effect describes the Compton scattering of CMB photons by the electrons in a reservoir of hot plasma. It causes a decrement in the intensity of the Rayleigh-Jeans region of the spectrum and a slight excess in the Wien region. This can be observed in the direction of a cluster of galaxies due to the effective temperature change of the CMB \citep{Birkinshaw1990Observations-of}. Measurements of the effect provide distinctly different information about cluster properties in contrast to X-ray imaging data \citep{Birkinshaw1999The-Sunyaev-Zel, Bonamente2006Determination-o}, while the combination of SZ and thermal bremsstrahlung observations leads to new insights into the structures of cluster atmospheres. This is imposed to very high sensitivities by experiments such as the Planck mission \citep{Planck-Collaboration2014Planck-2013-res}.
+%The combination of the Sunyaev-Zel'dovich and thermal bremsstrahlung observations of the intracluster gas enable the dimensions of the hot gas cloud to be determined independently of knowledge of the redshift of the cluster.
+
+
+
+\subsection{Scaling Relations}
+\label{subsec: Scaling Relations}
+X-ray scaling relations are of interest, as correctly modelling their forms tests our understanding of the physical processes that heat and shape the ICM over cluster lifetimes \citep{Finoguenov2001Details-of-the-,Reiprich2002The-Mass-Functi, Sanderson2003The-Birmingham-}.
+One of the most important properties is the total cluster mass. Although not directly observable, it is common practice to utilise the correlations between X-ray properties as a way to overcome this inconvenience \citep{Lloyd-Davies2010XMM-Cluster-Sur, Clerc2014The-XMM-LSS-sur}. Simple theoretical arguments lead to power-law scaling relations between cluster masses and observables \citep{Kaiser1986Evolution-and-c, Bryan1998Statistical-Pro}. The luminosity-mass ($L-M$) relation has a potentially large scatter $\sim 50\%$ \citep{Reiprich2002The-Mass-Functi} so is frequently calibrated by independently measuring cluster masses using a combination of the aforementioned proxies \citep{Borgani1999Velocity-Disper} (e.g. using a combination of the mass-temperature ($M-T$) and X-ray luminosity-temperature ($L-T$) relation  \citep{Mitchell1979The-X-ray-spect, Pratt2009Galaxy-cluster-, Maughan2014PICACS:-self-co} ).
+%consequently relations at $z < 1$ do not necessarily hold for $z > 1$ 
+% Ideally with a similarly-selected distant cluster sample, to probe the effect over time. 
+Scaling relations evolve as a function of redshift and are often extrapolated as necessary. In future work translations from our mass estimates will be relevant in the context of the investigation when making predictions about what can be observed.
+
+%To address this issue \cite{Clerc2014The-XMM-LSS-sur} implement an alternate approach whereby the X-ray flux observed from clusters of known redshift (either spectroscopic or photometric) to the flux expected from a model cluster of specified properties. This approach offers the reassurance that the model assumptions are defined and compared to the two observables (flux and redshift) in as clear a manner as possible.  
+
+
+
+% These values are slightly different from those given in \cite{Pratt2009Galaxy-cluster-} due to \citeauthor{app2009}'s use of an updated $M_{\rm 500}-Y_{X}$ relation. Specifically,  we use the relation in Eq. 2 of \cite{app2009}, i.e. we adopt a non-self-similar slope for the $M_{\rm 500}-Y_{X}$ relation. The adopted $\eta$ and $\alpha$ values are derived from rexcess luminosity data uncorrected for the Malmquist bias. The effect of these choices is further discussed below.
+
+%To measure accurate luminosities and probe the underlying physical causes; furthermore, precise calibration of the evolution of the scaling relations is needed, ideally with a similarly-selected distant cluster sample, to probe the effect over time.
+
+
+\section{Cluster Catalogues \& Data Compilation}
+A substantial dataset is a fundamental prerequisite when attempting to decipher astrophysical data. A complete sample of heterogeneously assembled clusters was selected by evaluating four  surveys using a single method (as in \cite{Fassbender2011The-x-ray-lumin}). The approach implemented was that of \cite{Piffaretti2011The-MCXC:-a-met}, during the compilation of the The Meta-Catalogue of X-ray detected Clusters of galaxies (MCXC)\footnote{This decision was one of practicality as the MCXC is the largest considered catalogue as shown in Table. \ref{tab: cluster surveys}.}. Based on the ROSAT All Sky Survey and serendipitous cluster catalogues, each total cluster mass $M_{500}$ and luminosity $L_{500}$ is standardised in the $[0.1-2.4] \unit{keV}$ band to an overdensity of 500. The respective $L-M$ scaling relation (\ref{eq: L-M}), derived by \cite{Pratt2009Galaxy-cluster-} and updated by \cite{Arnaud2010The-universal-g} has an evolutionary dependency characterised by $E^{2}(z)\! = \! \Omega_m (1+z)^{3} + \Omega_{\Lambda}$ with ${\rm log}(\eta)\!=\!-3.79$, $\alpha\!=\!1.64$.
+\begin{equation}
+E(z)^{-7/3} \left( \frac{L_{\rm 500}}{10^{44} \unit{erg s^{-1}}} \right)=\eta \left( \frac{M_{\rm 500}}{10^{12} \unit{M_{\sun}}} \right)^{\alpha}
+\label{eq: L-M} 
+\end{equation}
+
+%\subsection{XMM-XCS}
+Unlike the other catalogues, the all-sky Planck catalogue \citep{Planck-Collaboration2014Planck-2013-res} determines cluster masses using a newly-proposed SZ-mass proxy (\S \ref{subsec: Thermal SZ Effect}). The XXIX release is the deepest all-sky cluster catalogue, with redshifts up to about one, and spans the broadest cluster mass range.% from $0.1$ to $1.6 \times \unit{10^{15}M\sun}$ (change this).
+
+The XMM X-ray Cluster Survey (XMM-XCS) \citep{Mehrtens2012The-XMM-Cluster} is a serendipitous search for galaxy clusters which aims to measure cosmological parameters and trace the evolution of X-ray scaling relations (\S \ref{subsec: Scaling Relations}). This first data release consists of  X-ray clusters with bolometric luminosities measured in the $[0.05 - 100] \unit{keV}$ band. The XMM large scale structure (XMM-LSS) survey \citep{Willis2013Distant-galaxy-, Clerc2014The-XMM-LSS-sur} is also well placed to contribute to this investigation: covering 11 deg$^2$ with X-ray imaging to a depth of $\sim\! 10^{−14} \unit{erg s^{-1} cm^{-2}}$ for extended sources in the $[0.5-2]\unit{keV}$ waveband, accompanied by optical and mid-infra-red (MIR) photometry. 
+
+To unify the samples, suitable X-ray temperature dependant flux conversion factor functions $\kappa (T_X) = L_X^{[0.1-2.4]}/L_X$ were required for both XMM surveys. Occasionally modified fluxes can be obtained assuming a fixed conversion factor \citep{Willis2013Distant-galaxy-} providing the waveband has a narrow range (note the rough uniformity of XMM-LSS from $T \gtrsim  1 \unit{keV}$ in Fig. \ref{fig: T_x vs kappa}), however the procedure is more complex for vast wavebands such as that used in the XMM-XCS. Conversion factors were computed iteratively using {\tt Xspec} (implementing an APEC emission model \citep{Smith2001Collisional-Pla}), a quasi-continuous depiction is summarised in Fig. \ref{fig: T_x vs kappa}.
+
+%The XMM-LSS project has previously demonstrated the ability to identify clusters to z = 1.2 (Bremer et al. 2006) and has published z < 1 cluster number counts selected according to a clear, quantitative selection function (Pacaud et al. 2007). 
+
+%visual representation 
+\begin{figure}
+\centering
+\includegraphics[width =1.0\linewidth]{Figures/T_kappa.eps}
+\caption{{\tt Xspec} Luminosity conversion functions, $\kappa (T_{x})$ for XMM-XCS \textbf{\textcolor{blue}{(blue)}} and XMM-LSS \textbf{\textcolor{red}{(red)}} cluster surveys for a range of relevant X-ray temperataures. Note the increasing nonlinerarity as $T_X \rightarrow 1 \unit{keV}$ and the maxima/minima at yet lower temperatures. This form can be intuively predicted given that in the respective cases the luminoisty observational ranges significantly exceed and are marginally narrower than $[0.1-2.4]\unit{keV}$.}\label{fig: T_x vs kappa}
+\end{figure}
+\begin{table}
+\centering
+\caption{Comparision of the summarised data content and observational information for each custer catlagoue. The respective band conversion factors can be found in Fig.\ref{fig: T_x vs kappa}} \label{tab: cluster surveys}
+\begin{tabular}{ccccc}
+\hline 
+Cluster Survey & $N_{clusters}$ & Band/$\unit{keV}$ & Proxy \\ 
+\hline 
+MCXC & $1743 $ &	$0.1-2.4$&	X-ray \\ 
+PCCS-SZ XXIX & $813$ & N/A & SZ-mass \\ 
+XMM-XCS DR1& $401$ & $ 0.05 - 100$	& X-ray \\ 
+XMM-LSS& $52$ & $0.5-2.0$	 & X-ray \\ 
+\hline 
+\end{tabular} 
+\end{table}
+%\begin{figure*}
+ % \centering
+  %\includegraphics[width =1.0\linewidth]{Figures/sky_plot_cluster_catalogues.eps}
+%\caption{Distribution of all contributing clusters from each composite serendipedous and.. clusters}\label{fig: sky plot}
+%\end{figure*}
+\section{Evolutionary Analysis}
+\label{subsec: Evolutionary and Cosmological Analysis}
+\begin{figure}
+\centering
+%\includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, width =1.0\linewidth]{Figures/M_ratio_log.eps}
+\includegraphics[trim=0cm 5.96cm 0cm 0cm, clip=true, width =1.0\linewidth]{References/Fakhouri.O/Fakhouri_2010/fig6_editted.pdf}
+\caption{Taken from \cite{Fakhouri2010The-merger-rate}: Mean mass assembly history $M(z)$ of all $z = 0$ resolved dark matter haloes in the two Millennium simulations (solid curves). The dotted curves show the predictions given by integrating the mean of their fitting formula (\ref{eq: dM/dt}).}\label{fig:mass assembly history}
+\end{figure}
+The mean magnitude of cluster mass accretion over a given period of time is heavily dependant on the chosen cosmology \citep{Voit2005Tracing-cosmic-, Benson2013Dark-matter-hal} and to fully understand the of the details of these hierarchical merging processes, numerical simulations are required. \cite{Fakhouri2010The-merger-rate} constructed merger trees of dark matter haloes, improving on the work of \cite{McBride2009Mass-accretion-} and quantifying merger and mass growth rates using a joint dataset from the Millennium \citep{Springel2005Simulations-of-} and Millennium-II simulations. Their simple and accurate fitting formula for the mean mass growth rate of haloes as a function of mass and redshift (\ref{eq: dM/dt}) has been further adapted to visualise how our cluster populations evolve in the $(M,z)$ plane.
+\begin{equation}
+\label{eq: dM/dt}
+\langle \partial M/\partial t \rangle  = (\xi/10^{12}\unit{M_{\sun}}) (M/10^{12}\unit{M_{\sun}})^{\phi} E(z) \unit{yr^{-1}}
+\end{equation}
+%\begin{equation}\label{eq: time-redshift relation}
+%t = \dfrac{2}{3 H_0}\dfrac{1}{\sqrt{1-\Omega_0}}\operatorname{arcsinh}\left( \sqrt{\dfrac{\Omega_{\Lambda}}{\Omega_0(E^{2}(z) - \Omega_{\Lambda})}}\hspace{1 mm}\right)
+%\end{equation}
+\citeauthor{Eisenstein1997An-Analytic-Exp}'s time-redshift relation then allows us to transform  (\ref{eq: dM/dt}) into an equation that describes the evolution of a cluster's mass as a function of redshift (\ref{eq: Delta M}).% via the substitution $\gamma = \sqrt{\Omega_{\Lambda}/\Omega_0}$.
+\begin{equation}\label{eq: Delta M}
+\Delta M \approx - \int_{z(t_{1})}^{z(t_{2})} \dfrac{\xi M^{\phi}}{H_0(1+z)}\dfrac{E(z)}{\sqrt{\Omega_0(1+z)^3 + \Omega_{\Lambda}}} \mathrm{d}z 
+\end{equation}
+%$M_0 = M(t) + \Delta M (t_0, t)$,
+Numerical integration was implemented to yield a solution for all mass and redshift increments (given that $\xi \approx 46 $ and $\phi \approx 1.1$), this translates to approximate evolutionary paths for all mass accretion histories $M(z)$ and current day masses $M_0$. N.B. Future work will be complimented with the respective lookback times via an analogous method \citep{Hogg1999Distance-measur}.
+
+%When the fit for the mean mass growth rate is integrated over a halo's history, we find excellent match to the mean mass assembly histories of the simulated haloes. By combining merger rates and mass assembly histories, we present results for the number of mergers over a halo's history and the statistics of the redshift of the last major merger. 
+%To compute the total mass growth rate of a halo of a given mass $M_0$ at time $t$, we follow the main branch of its merger tree and set $\dot{M}=(M_0-M_1)/\Delta t$, where $M_0$ is the descendant mass at time $t$ and $M_1$ is the mass of its most massive progenitor at time $t-\Delta t$. The mean value of $\dot{M}$ as a function of $z$ for the complete set of resolved haloes in the two Millennium simulations is plotted in Fig.~\ref{fig:Mdot} (solid curves)
+
+\section{Discussion \& Future Work}
+\begin{figure*}
+\centering
+\includegraphics[trim=0.9cm 0.8cm 0cm 0.8cm, clip=true, width =1.05\linewidth]{Figures/M_Z_log.eps}
+\includegraphics[trim=0.9cm 0.8cm 0cm 0.8cm, clip=true, width =1.05\linewidth]{Figures/M_Z.eps}\caption{Logarithmic (above) and linear (below) observational and evolutionary homogenised cluster survey data. Each composite cluster survey (converted as neccessary) overlayed on top of a recreation of \citeauthor{Fakhouri2010The-merger-rate}'s cluster mass acretion rate in the form of a surface plot. Isocontours of colour depict an increasing current day mass from \textbf{\textcolor{blue}{(blue)}}-\textbf{\textcolor{red}{(red)}}.The corresponding luminosity $L(z)$ figures will be made available in the final publication.}\label{fig: Mass Plots}
+\end{figure*}
+The homogenised cluster data agrees with expectations, however each composite catalogue is the subject of observational flux limitations to a varying extent (soon to be portrayed graphically). Note each datasets tendency to plateau at higher masses, luminosities and redshifts in the linear version of Fig. \ref{fig: Mass Plots}. Underlying issues also arise due to inconsistencies in terms of selection and assembly bias. 
+
+On a cosmological and evolutionary basis, preliminary simulations appear in accordance with that of \cite{Fakhouri2010The-merger-rate} as Fig. \ref{fig:mass assembly history} was used as a systematic consistency check prior to the production of Fig. \ref{fig: Mass Plots}. This gives us an insight to how each sample member has evolved over time, outlining both the mass and redshift of prospective progentitors. 
+
+In future work I intend to amend these primary results with more probabilistically distributed evolution paths based on the respective rate of each method of mass accretion (e.g. frequency of minor and major mergers). I also propose enforcing more rigorous statistical considerations as in \cite{Harrison2013A-consistent-ap} who highlight observational limitations and the underlying naivety of preceding statistical analysis. Given the infancy of the investigation it is difficult to draw in depth conclusions from the observations and evolutionary analysis, however significant progress will be made in the follow up paper. 
+
+\section*{Acknowledgments}
+I thank T. Wigg for assistance as my partner as well as Prof M. Bremer and Dr B. Maughan for guidance throughout the duration of the investigation. This work made extensive use of NASA's Astrophysics Data System and the VizieR Service for Astronomical Catalogues.
+
+
+\footnotesize{
+\bibliographystyle{mn2e}
+\bibliography{bib_gea}}
+
+%\begin{landscape}
+
+%\end{landscape}
+
+
+%\begin{figure*}
+%\centering
+%\includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, width =1.0\linewidth]{Figures/L_z_log.eps}
+%\includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, width =1.0\linewidth]{Figures/L_z.eps}
+%\caption{Histograms of $P'(\theta')$ (normalized frequency) for inverse transform \textbf{\textcolor{red}{(red)}} and reject-accept \textbf{\textcolor{blue}{(blue)}} methods with fitted sine profiles for $N = 10^{\{3,4,5,6\}}$ (goodness of fit summarised in Table.\ref{table_chi}.)}\label{fig: Luminosity Plots}
+%\end{figure*}
+
+%\bsp
+\label{lastpage}
+\vfill
+\end{document}
+

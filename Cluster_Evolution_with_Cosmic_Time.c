@@ -10,12 +10,9 @@
 #define M_sun 1.99E30
 #define alpha 1.64
 #define k 1.87931 //k = 10^{0..274}
-// enum VARIABLE_TYPE {MASS, LUMINOSITY};
-//    typedef    enum GRAPH_TYPE     GRAPH_TYPE;
-//     enum AXIS_TYPE {LINEAR, LOGSACELE};
-//    typedef    enum AXIS_TYPE     AXIS_TYPE;
-//    enum GRAPH_TYPE {REGULAR, RATIO};
-//    typedef    enum GRAPH_TYPE   GRAPH_TYPE;
+/* future changes:
+-make the code more object oriented by using typedef and enumarates...
+*/
 void PLOT_RESULTS(int VARIABLE_TYPE, int AXIS_TYPE, int GRAPH_TYPE);
 double EQUATION_M(double z)
 {
@@ -49,7 +46,7 @@ double INTEGRATION(double n, double an, double a, double(*f)(double arg))
     return ((h / 2) * s);
 }
 
-int main()
+int main(void)
 {
     double z, zn = 0, t, M_Z, M_0, L_Z, L_0, DELTA_M, RATIO_M, RATIO_L, INTEGRAL_M, INTEGRAL_t;
     int VARIABLE_TYPE, AXIS_TYPE, GRAPH_TYPE;
@@ -65,7 +62,7 @@ int main()
         for (M_Z = 1e-5; M_Z < 1e5; M_Z = M_Z * 1.1)
         {
             for (z = 0.001 ; z <= 14; z = z * 1.05)
-            //for (z = 0.001 ; z <= 14; z = z+1)
+                //for (z = 0.001 ; z <= 14; z = z+1)
             {
                 INTEGRAL_M = INTEGRATION(1000, zn, z, EQUATION_M);
                 t = INTEGRATION(1000, zn, z, EQUATION_T);
@@ -108,9 +105,6 @@ void PLOT_RESULTS(int VARIABLE_TYPE, int AXIS_TYPE, int GRAPH_TYPE)
     //fprintf(pipe, " set key at 1.4, 13, 1\n");
     //fprintf(pipe, " set key horizontal outside bottom right\n");
     //fprintf(pipe, " set key above \n");
-
-
-
     //fprintf(pipe, " unset colorbox\n");
     //fprintf(pipe, " unset surface\n");
     //fprintf(pipe, " set xtics nomirror\n");
@@ -139,7 +133,7 @@ void PLOT_RESULTS(int VARIABLE_TYPE, int AXIS_TYPE, int GRAPH_TYPE)
         fprintf(pipe, " set xrange [0.003:1.5]\n");
         fprintf(pipe, " set logscale x\n");
         //fprintf(pipe, " set logscale x2\n");
-        
+
     }
 
     fprintf(pipe, " set xlabel \" z\"\n");
@@ -162,7 +156,7 @@ void PLOT_RESULTS(int VARIABLE_TYPE, int AXIS_TYPE, int GRAPH_TYPE)
         fprintf(pipe, " set cbrange [1:3000]\n");
         fprintf(pipe, " set cbtics ('1' 1, '10' 10, '10^{2}' 100, '10^{3}' 1000)\n");
         fprintf(pipe, " set mcbtics (2,3,4,5,6,7,8,9,20,30,40,50,60,70,80,90,200,300,400,500,600,700,800,900,2000,3000)\n");
-        
+
         // fprintf(pipe, " set zrange [0.01:10000]\n");
 
         if (GRAPH_TYPE == 1)
