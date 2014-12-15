@@ -1,0 +1,24 @@
+#setenv HEADAS /usr/local/calgary/heasoft-6.16/x86_64-unknown-linux-gnu-libc2.5
+#alias heainit "source $HEADAS/headas-init.csh"
+#heainit
+
+#xspec
+
+dummyrsp 0.05 100.0 50000
+
+set fileid [open bolcorr2.dat w]
+
+for {set i 1} {$i < 2000} {incr i} {
+set t [expr 0.0 + $i / 100.0]
+model APEC & $t & 0.3 & 0 & 1.0
+flux 0.1 2.4
+tclout flux
+set MCXCband [lindex $xspec_tclout 0]
+flux 0.01 100.0
+tclout flux
+set bol [lindex $xspec_tclout 0]
+set bolcorr [expr $bol / $MCXCband]
+puts $fileid "$t $bolcorr"
+}
+close $fileid
+
